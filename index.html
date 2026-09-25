@@ -53,8 +53,9 @@
   <h2>4. 権限の利用目的</h2>
   <ul>
     <li><strong>ストレージ (storage)</strong>: 入力した検索条件（前回の入力内容）、保存した検索の一覧、および保存したセラーのURL・表示名・メモを、利用者の Chrome の拡張機能用保存領域（<code>chrome.storage.sync</code>）に保存し、次回起動時に復元するためにのみ使用します。データが外部に送信されることはありません。</li>
+    <li><strong>サイドパネル (sidePanel)</strong>: 拡張機能の画面をブラウザのサイドパネルに表示するために使用します。ページを移動しても画面が閉じないようにするための権限で、ウェブページの内容にはアクセスしません。</li>
   </ul>
-  <p>本拡張機能は <code>storage</code> 以外の権限（host_permissions・content_scripts 等）を一切要求しません。</p>
+  <p>本拡張機能は <code>storage</code>・<code>sidePanel</code> 以外の権限（host_permissions・content_scripts 等）を一切要求しません。</p>
 
   <h2>5. 第三者への提供</h2>
   <p>本拡張機能は外部のサーバーと通信しないため、入力した検索条件・保存した検索・保存したセラーを含む、いかなる情報も第三者に提供・販売・共有することはありません。</p>
