@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プライバシーポリシー — テラピーク検索君</title>
+  <style>
+    body { font-family: -apple-system, "Hiragino Sans", "Segoe UI", sans-serif; line-height: 1.8;
+           color: #1a1a1a; max-width: 760px; margin: 40px auto; padding: 0 20px; }
+    h1 { font-size: 24px; border-bottom: 2px solid #e8590c; padding-bottom: 8px; }
+    h2 { font-size: 18px; margin-top: 28px; color: #0a2540; }
+    .meta { color: #6b7280; font-size: 14px; }
+    .highlight { background: #fdf1ea; border-left: 4px solid #e8590c; padding: 12px 16px; border-radius: 6px; }
+    ul { padding-left: 1.2em; }
+    footer { margin-top: 40px; color: #6b7280; font-size: 13px; border-top: 1px solid #e2e5ea; padding-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>プライバシーポリシー</h1>
+  <p class="meta">対象: Chrome 拡張機能「テラピーク検索君」<br />最終更新日: 2026年9月25日</p>
+
+  <div class="highlight">
+    本拡張機能に入力した検索キーワード・期間・カテゴリ・商品の状態・出品形式・価格帯・出品者の所在地・並び順などの検索条件、および保存した検索は、<strong>すべて利用者のブラウザ内で処理・保存されます</strong>。
+    本拡張機能が外部のサーバーと通信することは一切ありません。入力した検索条件をもとに eBay Seller Hub Research（テラピーク）の検索用URLを組み立て、利用者の操作で新しいタブに開くだけの仕組みです。
+    入力内容・保存した検索は、利用者ご自身の Google アカウントに同期される Chrome の拡張機能用保存領域（<code>chrome.storage.sync</code>）にのみ保存され、それ以外の場所へ送信されることはありません。
+  </div>
+
+  <h2>1. 収集する情報</h2>
+  <p>本拡張機能は、以下の情報をブラウザ内でのみ扱います。これらの情報が外部のサーバーに送信されることはありません。</p>
+  <ul>
+    <li>検索キーワード</li>
+    <li>期間（日数）</li>
+    <li>カテゴリ（大分類・中分類）</li>
+    <li>商品の状態・出品形式</li>
+    <li>Top Rated Seller 限定の指定</li>
+    <li>最低価格・最高価格</li>
+    <li>出品者の所在地（Seller Location）</li>
+    <li>並び順</li>
+    <li>「検索条件を保存」で保存した検索の名前と上記の各条件</li>
+  </ul>
+  <p>本拡張機能は、氏名・メールアドレス等のアカウント情報、閲覧履歴、Cookie、位置情報など、上記以外のいかなる個人情報も収集しません。</p>
+
+  <h2>2. データの送信・外部通信</h2>
+  <p>本拡張機能は、外部のサーバー・APIと一切通信しません。</p>
+  <ul>
+    <li>入力された検索条件は、すべて利用者のブラウザ内でテラピークの検索用URL（<code>https://www.ebay.com/sh/research?...</code>）に組み立てられます。</li>
+    <li>「テラピークを開く」ボタンを押すと、組み立てられたURLで新しいタブが開かれます。このとき通信するのは、利用者が明示的に開いた eBay のページのみです（利用者が自らのブラウザで直接 eBay のページを開く操作と同じです）。</li>
+    <li>本拡張機能自体が、入力内容やその他の情報をどこかのサーバーへ送信することはありません。</li>
+  </ul>
+  <p>本拡張機能は <code>content_scripts</code> や <code>host_permissions</code> を持たず、eBay を含むいかなるウェブページの内容を読み取ったり書き換えたりすることもありません。</p>
+
+  <h2>3. データの保存</h2>
+  <p>入力した検索条件（前回の入力内容）と、「検索条件を保存」で保存した検索の一覧は、Chrome の拡張機能用保存領域（<code>chrome.storage.sync</code>）に保存されます。この保存先は利用者ご自身の Google アカウントに紐づく Chrome の同期領域であり、本拡張機能の開発者を含む第三者がアクセスすることはできません。</p>
+  <p>保存された内容は、保存した検索の一覧から「削除」ボタンを押す、または本拡張機能をアンインストールすることでいつでも消去できます。</p>
+
+  <h2>4. 権限の利用目的</h2>
+  <ul>
+    <li><strong>ストレージ (storage)</strong>: 入力した検索条件（前回の入力内容）と、保存した検索の一覧を、利用者の Chrome の拡張機能用保存領域（<code>chrome.storage.sync</code>）に保存し、次回起動時に復元するためにのみ使用します。データが外部に送信されることはありません。</li>
+  </ul>
+  <p>本拡張機能は <code>storage</code> 以外の権限（host_permissions・content_scripts 等）を一切要求しません。</p>
+
+  <h2>5. 第三者への提供</h2>
+  <p>本拡張機能は外部のサーバーと通信しないため、入力した検索条件・保存した検索を含む、いかなる情報も第三者に提供・販売・共有することはありません。</p>
+
+  <h2>6. アナリティクス・トラッキングについて</h2>
+  <p>本拡張機能には、アクセス解析・広告・トラッキングの仕組みは組み込まれていません。利用状況の収集や外部への送信も一切行いません。</p>
+
+  <h2>7. eBayとの関係</h2>
+  <p>本拡張機能は、入力した検索条件から eBay Seller Hub Research（テラピーク）の検索用URLを組み立て、利用者の操作で新しいタブに開くツールです。eBay のページの内容を読み取ったり、自動で操作したりすることは一切ありません。本拡張機能は eBay Inc. の公式製品ではなく、eBay とは関係ありません。</p>
+
+  <h2>8. 子どものプライバシー</h2>
+  <p>本拡張機能はアカウント情報や個人を特定する情報を収集しないため、年齢を問わずご利用いただけます。</p>
+
+  <h2>9. ポリシーの変更</h2>
+  <p>内容を変更する場合は、本ページの「最終更新日」を更新して掲示します。</p>
+
+  <h2>10. お問い合わせ</h2>
+  <p>本ポリシーに関するお問い合わせ先: <a href="mailto:naokijodan2@gmail.com">naokijodan2@gmail.com</a></p>
+
+  <footer>
+    本拡張機能は eBay Inc. の公式製品ではなく、eBay とは関係ありません。
+  </footer>
+</body>
+</html>
